@@ -23,16 +23,16 @@ Let's create an access token using the following documentation [How to generate 
 - On Linux/Mac OS, please use
 ```bash
 export ARTIFACTORY_HOSTNAME="sup009entsuxx.jfrog.io"
-export ARTIFACTORY_LOGIN="taletsup009entsuxx@jfrog.com"
-export ARTIFACTORY_PASSWORD="SwampUp2022!"
+export ARTIFACTORY_LOGIN="USER_NAME"
+export ARTIFACTORY_PASSWORD="PASSWORD"
 export ARTIFACTORY_ACCESS_TOKEN="xxxxxxxx"
 ```
 
 - On Windows OS, please use
 ```bash
 set ARTIFACTORY_HOSTNAME="sup009entsuxx.jfrog.io"
-set ARTIFACTORY_LOGIN="taletsup009entsuxx@jfrog.com"
-set ARTIFACTORY_PASSWORD="SwampUp2022!"
+set ARTIFACTORY_LOGIN="USER_NAME"
+set ARTIFACTORY_PASSWORD="PASSWORD"
 set ARTIFACTORY_ACCESS_TOKEN="xxxxxxxxxx"
 ```
 ![setting environemnt variables](https://i.imgur.com/BastCGE.gif)
@@ -54,10 +54,10 @@ export SCRIPT_DIR=$(pwd)
 # Please ask the Trainer or TAs for your assigned JFrog Cloud testbed
 export ARTIFACTORY_HOSTNAME="sup009entsuxx.jfrog.io"
 # admin user
-export ARTIFACTORY_LOGIN="taletsup009entsuxx@jfrog.com"
+export ARTIFACTORY_LOGIN="USER_NAME"
 
 # admin password (check your testbed details with your TA)
-export ARTIFACTORY_PASSWORD="SwampUp2022!"
+export ARTIFACTORY_PASSWORD="PASSWORD"
 
 # Service admin token - see instructions on Lab 1.5 
 export ARTIFACTORY_ACCESS_TOKEN="xxxxx"
@@ -88,6 +88,6 @@ source .env
 ```
 source SUP016-Automate_everything_with_the_JFrog_CLI/.env
 
-docker run --rm --name my-project -it -v /var/run/docker.sock:/var/run/docker.sock  --env  JFROG_PLATFORM="${ARTIFACTORY_HOSTNAME}" --env ADMIN_USER="${ARTIFACTORY_LOGIN}" --env ADMIN_PASSWORD="${ARTIFACTORY_PASSWORD}" --env JFROG_EDGE="${ARTIFACTORY_HOSTNAME}" --env JFROG_CLI_LOG_LEVEL="${JFROG_CLI_LOG_LEVEL}" --env JFROG_CLI_TRANSITIVE_DOWNLOAD_EXPERIMENTAL="${JFROG_CLI_TRANSITIVE_DOWNLOAD_EXPERIMENTAL}" --env JFROG_CLI_TRANSITIVE_DOWNLOAD_EXPERIMENTAL="${JFROG_CLI_TRANSITIVE_DOWNLOAD_EXPERIMENTAL}" -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven soleng.jfrog.io/swampup2022-docker-local/docker20.10.16-npm18.1-maven3.8.5-jf2.16.4:11-jdk-alpine /bin/bash
+docker run --rm --name my-project -it -v /var/run/docker.sock:/var/run/docker.sock soleng.jfrog.io/swampup2022-docker-local/docker20.10.16-npm18.1-maven3.8.5-jf2.16.4:11-jdk-alpine /bin/bash
 ```
 ## Proceed to the Lab-1-Intro_to_automation sub-folder now 
